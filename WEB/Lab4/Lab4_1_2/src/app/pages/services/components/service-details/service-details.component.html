@@ -1,0 +1,26 @@
+<div class="service-details">
+  <div class="service-details__item">
+    <b>Price: </b>
+    {{service.price}}BYN
+  </div>
+  <div class="service-details__item">
+    <b>Bill count: </b>
+    {{bills.length}}
+  </div>
+  <div class="service-details__item" *ngIf="bills.length > 0">
+    <b>Bills: </b>
+  </div>
+
+  <ng-container *ngFor="let bill of bills">
+    <div class="service-details__item p-2 bg-light">
+      <div class="service-details__item">
+        <b>Subscriber: </b>
+        id: {{bill.subscriber.id}}; name: {{bill.subscriber.name}}
+      </div>
+      <div class="service-details__item">
+        <b>Bill amount: </b>
+        {{bill.amount}}
+      </div>
+    </div>
+  </ng-container>
+</div>

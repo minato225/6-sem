@@ -1,0 +1,29 @@
+.service-list {
+  width: 100%;
+  margin-top: 50px;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    div {
+      margin-right: 16px;
+    }
+
+    div:nth-last-child {
+      margin-right: 0;
+    }
+  }
+
+
+  &__item:nth-last-child {
+    margin-bottom: 0;
+  }
+}

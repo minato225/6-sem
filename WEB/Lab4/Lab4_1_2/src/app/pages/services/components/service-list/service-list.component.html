@@ -1,0 +1,12 @@
+<div class="service-list">
+  <ng-container *ngFor="let item of items; let index = index">
+    <div class="service-list__item accordion-item p-3 bg-light" (click)="onItemClick(index)">
+      <div class="title-semi-2">№{{item.id}}</div>
+      <div class="title-semi-2">{{item.name}}</div>
+    </div>
+
+    <ng-container *ngIf="activeItem == index">
+      <service-details [service]="item"></service-details>
+    </ng-container>
+  </ng-container>
+</div>

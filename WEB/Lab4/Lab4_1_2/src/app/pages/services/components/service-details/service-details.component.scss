@@ -1,0 +1,12 @@
+.service-details {
+  padding: 16px 16px 16px 0;
+
+  &__item {
+    margin-bottom: 8px;
+    margin-left: 16px;
+  }
+
+  &__item:nth-last-child {
+    margin-bottom: 0;
+  }
+}

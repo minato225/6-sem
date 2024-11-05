@@ -1,0 +1,27 @@
+<h1 class="fw-bold">Add new service</h1>
+<div class="form row g-3 needs-validation" [formGroup]="form" novalidate>
+
+  <div class="col-auto">
+    <label class="form-label">Service name: </label>
+    <input
+      type="text"
+      formControlName="name"
+      class="form-control"
+      [class.is-invalid]="form.controls.name.invalid && form.controls.name.dirty"
+    />
+  </div>
+
+  <div class="col-auto">
+    <label class="form-label">Service price: </label>
+    <input
+      type="number"
+      formControlName="price"
+      class="form-control"
+      [class.is-invalid]="form.controls.price.invalid && form.controls.price.dirty"
+    />
+    <div class="invalid-feedback">Invalid min value (min value = 100)</div>
+  </div>
+  <div class="row-auto">
+    <button class="btn btn-primary" (click)="onSubmit()" [disabled]="!form.valid">ADD</button>
+  </div>
+</div>
